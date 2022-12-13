@@ -1,0 +1,20 @@
+select * from cad_prod where id=500 order by descricao_prod;
+select * from cad_prod where valor>21 order by descricao_prod desc;
+select * from cad_prod where id=500 order by descricao_prod desc;
+select * from cad_prod where id=500 or id = 90;
+select * from cad_prod where id=500 and id = 90; -- vai retornar vazio pois ele vai procurar o "id" igual a 500 e 90
+select * from cad_prod where id > 500 and id < 2000;
+select * from cad_prod where valor > 21 and idclasse <> 1216 order by valor;
+select * from cad_prod where valor > 21 or idclasse <> 1216 order by valor;
+select * from cad_prod where idclasse = 9999 order by valor;
+select * from cad_prod where idclasse = 9999 or valor = 6 order by valor;
+select * from cad_prod where valor between 700 and 10000 order by valor;
+select * from cad_prod where descricao_prod like 'laranja%';
+select * from cad_prod where descricao_prod like '%laranja';
+select * from cad_prod where descricao_prod like '%laranja%';
+select * from cad_prod where descricao_prod like '%laranja%' and idclasse <> 1216;
+select * from cad_prod where descricao_prod like '%laranja%' and idclasse <> 1216 and descricao_prod not like '%gatorade%';
+select * from cad_prod where descricao_prod like '%laranja%' and idclasse <> 1216 and descricao_prod not like '%gatorade%' and descricao_prod not like '%kg%' and id = 1;
+select * from cad_prod limit 10;
+select distinct idclasse from cad_prod;
+select * from cad_prod;
